@@ -1,0 +1,8 @@
+# dependencies
+/node_modules
+
+# media files
+/src/assets
+
+# production
+/build
