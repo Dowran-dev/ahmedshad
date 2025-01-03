@@ -62,86 +62,86 @@ const placeholderVideos = [
 ];
 
 // ... [MobileVideoModal component remains the same]
-const MobileVideoModal = ({
-  video,
-  isOpen,
-  onClose,
-  onPrev,
-  onNext,
-  hasNext,
-  hasPrev,
-}) => {
-  const [isMuted, setIsMuted] = useState(false);
-
-  if (!isOpen) return null;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
-    >
-      <div className="relative w-full h-full">
-        <div className="absolute top-4 right-4 z-10 flex space-x-4">
-          <button
-            onClick={() => setIsMuted(!isMuted)}
-            className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 touch-manipulation"
-          >
-            {isMuted ? (
-              <VolumeX className="w-6 h-6 sm:w-8 sm:h-8" />
-            ) : (
-              <Volume2 className="w-6 h-6 sm:w-8 sm:h-8" />
-            )}
-          </button>
-          <button
-            onClick={onClose}
-            className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 touch-manipulation"
-          >
-            <X className="w-6 h-6 sm:w-8 sm:h-8" />
-          </button>
-        </div>
-
-        <video
-          autoPlay
-          loop
-          muted={isMuted}
-          playsInline
-          className="w-full max-w-[500px] mx-auto h-full object-cover"
-          src={video.src}
-        />
-
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
-          <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
-            {video.title}
-          </h3>
-          <div className="flex items-center justify-between text-white/80 text-sm sm:text-base">
-            <span>{video.venue}</span>
-          </div>
-        </div>
-
-        <div className="absolute left-2 right-2 sm:left-4 sm:right-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
-          {hasPrev && (
-            <button
-              onClick={onPrev}
-              className="p-2 sm:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 pointer-events-auto touch-manipulation"
-            >
-              <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
-            </button>
-          )}
-          {hasNext && (
-            <button
-              onClick={onNext}
-              className="p-2 sm:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 pointer-events-auto touch-manipulation"
-            >
-              <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
-            </button>
-          )}
-        </div>
-      </div>
-    </motion.div>
-  );
-};
+// const MobileVideoModal = ({
+//   video,
+//   isOpen,
+//   onClose,
+//   onPrev,
+//   onNext,
+//   hasNext,
+//   hasPrev,
+// }) => {
+//   const [isMuted, setIsMuted] = useState(false);
+//
+//   if (!isOpen) return null;
+//
+//   return (
+//     <motion.div
+//       initial={{ opacity: 0 }}
+//       animate={{ opacity: 1 }}
+//       exit={{ opacity: 0 }}
+//       className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+//     >
+//       <div className="relative w-full h-full">
+//         <div className="absolute top-4 right-4 z-10 flex space-x-4">
+//           <button
+//             onClick={() => setIsMuted(!isMuted)}
+//             className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 touch-manipulation"
+//           >
+//             {isMuted ? (
+//               <VolumeX className="w-6 h-6 sm:w-8 sm:h-8" />
+//             ) : (
+//               <Volume2 className="w-6 h-6 sm:w-8 sm:h-8" />
+//             )}
+//           </button>
+//           <button
+//             onClick={onClose}
+//             className="p-3 rounded-full bg-white/10 text-white hover:bg-white/20 touch-manipulation"
+//           >
+//             <X className="w-6 h-6 sm:w-8 sm:h-8" />
+//           </button>
+//         </div>
+//
+//         <video
+//           autoPlay
+//           loop
+//           muted={isMuted}
+//           playsInline
+//           className="w-full max-w-[500px] mx-auto h-full object-cover"
+//           src={video.src}
+//         />
+//
+//         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 sm:p-6">
+//           <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
+//             {video.title}
+//           </h3>
+//           <div className="flex items-center justify-between text-white/80 text-sm sm:text-base">
+//             <span>{video.venue}</span>
+//           </div>
+//         </div>
+//
+//         <div className="absolute left-2 right-2 sm:left-4 sm:right-4 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none">
+//           {hasPrev && (
+//             <button
+//               onClick={onPrev}
+//               className="p-2 sm:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 pointer-events-auto touch-manipulation"
+//             >
+//               <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8" />
+//             </button>
+//           )}
+//           {hasNext && (
+//             <button
+//               onClick={onNext}
+//               className="p-2 sm:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 pointer-events-auto touch-manipulation"
+//             >
+//               <ChevronRight className="w-6 h-6 sm:w-8 sm:h-8" />
+//             </button>
+//           )}
+//         </div>
+//       </div>
+//     </motion.div>
+//   );
+// };
 
 // ... [VideoThumbnail component remains the same]
 const VideoThumbnail = ({ video, onClick, index }) => {
@@ -345,25 +345,25 @@ const ArtistAboutSection = ({ artistInfo }) => {
         </motion.div>
 
         {/* Video Modal */}
-        <AnimatePresence>
-          {isVideoModalOpen && (
-            <MobileVideoModal
-              video={placeholderVideos[selectedVideoIndex]}
-              isOpen={isVideoModalOpen}
-              onClose={() => setIsVideoModalOpen(false)}
-              onPrev={() =>
-                setSelectedVideoIndex((prev) => Math.max(0, prev - 1))
-              }
-              onNext={() =>
-                setSelectedVideoIndex((prev) =>
-                  Math.min(placeholderVideos.length - 1, prev + 1)
-                )
-              }
-              hasPrev={selectedVideoIndex > 0}
-              hasNext={selectedVideoIndex < placeholderVideos.length - 1}
-            />
-          )}
-        </AnimatePresence>
+        {/*<AnimatePresence>*/}
+        {/*  {isVideoModalOpen && (*/}
+        {/*    <MobileVideoModal*/}
+        {/*      video={placeholderVideos[selectedVideoIndex]}*/}
+        {/*      isOpen={isVideoModalOpen}*/}
+        {/*      onClose={() => setIsVideoModalOpen(false)}*/}
+        {/*      onPrev={() =>*/}
+        {/*        setSelectedVideoIndex((prev) => Math.max(0, prev - 1))*/}
+        {/*      }*/}
+        {/*      onNext={() =>*/}
+        {/*        setSelectedVideoIndex((prev) =>*/}
+        {/*          Math.min(placeholderVideos.length - 1, prev + 1)*/}
+        {/*        )*/}
+        {/*      }*/}
+        {/*      hasPrev={selectedVideoIndex > 0}*/}
+        {/*      hasNext={selectedVideoIndex < placeholderVideos.length - 1}*/}
+        {/*    />*/}
+        {/*  )}*/}
+        {/*</AnimatePresence>*/}
       </div>
     </section>
   );
