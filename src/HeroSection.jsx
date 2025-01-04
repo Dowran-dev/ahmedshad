@@ -22,7 +22,7 @@ const HeroSection = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
       {/* Video Background with Grain Overlay */}
-      <video
+{/*       <video
         id="background-video"
         autoPlay
         loop
@@ -31,7 +31,7 @@ const HeroSection = () => {
         className="absolute top-0 left-0 w-full h-full object-cover opacity-80"
       >
         <source src={backgroundVideo} type="video/mp4" />
-      </video>
+      </video> */}
 
       {/* Animated Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
