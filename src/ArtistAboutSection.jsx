@@ -16,10 +16,10 @@ import {
   VolumeX,
 } from "lucide-react";
 
-import videoURL from "./ahmedshad.mp4";
-import videoURL2 from "./ahmedshad2.mp4";
-import videoURL3 from "./ahmedshad3.mov";
-import videoURL4 from "./ahmedshad4.mp4";
+// import videoURL from "./ahmedshad.mp4";
+// import videoURL2 from "./ahmedshad2.mp4";
+// import videoURL3 from "./ahmedshad3.mov";
+// import videoURL4 from "./ahmedshad4.mp4";
 import profilImage from "./ahmedshad.png";
 import thumbnail from "./thumbnail.png";
 import thumbnail2 from "./thumbnail2.png";
@@ -28,15 +28,15 @@ import thumbnail4 from "./thumbnail4.png";
 
 const placeholderVideos = [
   {
-    src: videoURL,
+    // src: videoURL,
     thumbnail: thumbnail,
     title: "Живой концерт в Новороссийске 2024",
-    venue: "Крокус Сити Холл",
+    venue: "Концерт Холл",
     duration: "2:15:00",
     views: "125K",
   },
   {
-    src: videoURL2,
+    // src: videoURL2,
     thumbnail: thumbnail2,
     title: "Фестиваль музыки 2024",
     venue: "Парк Горького",
@@ -44,7 +44,7 @@ const placeholderVideos = [
     views: "98K",
   },
   {
-    src: videoURL3,
+    // src: videoURL3,
     thumbnail: thumbnail3,
     title: "Сольный концерт",
     venue: "GlavClub",
@@ -52,7 +52,7 @@ const placeholderVideos = [
     views: "156K",
   },
   {
-    src: videoURL4,
+    // src: videoURL4,
     thumbnail: thumbnail4,
     title: "Новогодний концерт",
     venue: "ВТБ Арена",
