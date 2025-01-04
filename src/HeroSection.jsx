@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { MoveUpRight, Volume2, VolumeX } from "lucide-react";
 import { motion } from "framer-motion";
-import backgroundVideo from "./ahmedshad.mp4";
+// import backgroundVideo from "./ahmedshad.mp4";
 
 const HeroSection = () => {
   const [isMuted, setIsMuted] = useState(true);
