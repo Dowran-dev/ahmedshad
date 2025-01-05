@@ -193,7 +193,7 @@ const VideoThumbnail = ({ video, onClick, index }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
-      className="relative aspect-[9/16] snap-start w-[240px] sm:w-[250px]"
+      className="relative aspect-[11/16] lg:aspect-[9/16] snap-start w-[230px] sm:w-[250px]"
     >
       <div
         className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden cursor-pointer group touch-manipulation"

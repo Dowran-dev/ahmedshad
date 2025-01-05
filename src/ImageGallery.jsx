@@ -32,8 +32,8 @@ const ImageGallery = ({ images }) => {
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className="relative rounded-lg overflow-hidden bg-zinc-800"
-              style={{ height: "350px", flex: "1 0 auto" }} // Fixed height, flexible width
+              className="relative rounded-lg overflow-hidden bg-zinc-800 h-[300px] md:h-[350px]"
+              style={{ flex: "1 0 auto" }} // Fixed height, flexible width
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >
