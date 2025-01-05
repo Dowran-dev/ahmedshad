@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MoveUpRight, Volume2, VolumeX } from "lucide-react";
 import { motion } from "framer-motion";
-// import backgroundVideo from "./ahmedshad.mp4";
 
 const HeroSection = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -22,16 +21,19 @@ const HeroSection = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black">
       {/* Video Background with Grain Overlay */}
-{/*       <video
+      <video
         id="background-video"
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-80"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[120%] min-h-[130%] object-cover opacity-80"
       >
-        <source src={backgroundVideo} type="video/mp4" />
-      </video> */}
+        <source
+          src="https://www.dropbox.com/scl/fi/20jbrqwprqhkqann9dil8/0105.mov?rlkey=kb2zm9wxakoq2z5wavdhm0uwz&st=q26r0nvi&raw=1"
+          type="video/mp4"
+        />
+      </video>
 
       {/* Animated Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />

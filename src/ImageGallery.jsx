@@ -25,12 +25,15 @@ const ImageGallery = ({ images }) => {
     <section className="min-h-screen bg-zinc-950 py-12">
       <div className="max-w-7xl mx-auto px-4">
         {/* Image Grid with Auto Width and Fixed Height */}
+        {/* <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12">
+          Фотосессия
+        </h3> */}
         <div className="flex flex-wrap gap-4">
           {images.map((image, index) => (
             <motion.div
               key={index}
               className="relative rounded-lg overflow-hidden bg-zinc-800"
-              style={{ height: "300px", flex: "1 0 auto" }} // Fixed height, flexible width
+              style={{ height: "350px", flex: "1 0 auto" }} // Fixed height, flexible width
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
             >

@@ -38,12 +38,14 @@ const Homepage = () => {
   };
 
   const images = [
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwoje5KDeqy5uD5BROiheFJJfPwZB1zeL3g&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlBjNFz2lIk_Ak1QWu0PLdY0DBA8rpaHhB8hwrGWxlvjvrys56yknmZCiBOUoFbIrE2Q&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJGBgU_58V4qhroUTkVvTHJ7rpPpFMPXLZA&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJgQDhAMqMeYQ-tlOcyo-_xXKoykuGaTa09A&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8iTDU8jkDur9KuQXvOljZs-29eWpyx_oBQA&s",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkwV7OTCZJ4B6A4DVD9HpyHfj1nZejh3nlEg&s",
+    "https://dl.dropboxusercontent.com/scl/fi/y1chxr3qzanooeipfqrn3/albom1.jpg?rlkey=4t8t2uk2hreauqd23a6vdfhjm&st=lslnfoon&dl=0",
+    "https://dl.dropboxusercontent.com/scl/fi/qhb5htj6qba4hgh04dhdt/albom2.jpg?rlkey=iuidpah02chxxdrzvlqhg9mv8&st=vztvr3nl&dl=0",
+    "https://dl.dropboxusercontent.com/scl/fi/6xhbjow25ue98orbfl4de/albom3.jpg?rlkey=d1wsw7hom3ss50z88ruwyernq&st=9xxrk71m&dl=0",
+    // "https://dl.dropboxusercontent.com/scl/fi/3aru5f9zhht4wto9y6xan/albom4.jpg?rlkey=8m4pvintzg7xq604nw9obhbw2&st=ul3x64ly&dl=0",
+    "https://dl.dropboxusercontent.com/scl/fi/veoeq5nky9hdi4f5orrl2/albom5.jpg?rlkey=4smjhtnct4pfeelyytvm2wffn&st=bn57dpay&dl=0",
+    "https://dl.dropboxusercontent.com/scl/fi/blgcniqyg1h13euqz6lh3/albom6.jpg?rlkey=glf8w960ahkcdyts5q8nvq8uz&st=6qzpaqv3&dl=0",
+    "https://dl.dropboxusercontent.com/scl/fi/ux9dshnta48qx0jhkk5cn/NuQpGT4yG4U.jpg?rlkey=zejjap21mt82ez56r3oz7l7c6&st=48ioikwm&dl=0",
+    "https://dl.dropboxusercontent.com/scl/fi/52fxkeigbynyhfkrlbafa/qXBDxZUEig0.jpg?rlkey=w1b1fbcbviol8jyo51cnfg3a6&st=0nerltri&dl=0",
   ];
 
   const albums = [
@@ -154,6 +156,7 @@ const Homepage = () => {
         </div>
       </motion.header> */}
       <Header></Header>
+
       <HeroSection />
 
       {/* Enhanced "About Me" Section */}
@@ -339,7 +342,7 @@ const Homepage = () => {
               </div>
 
               <motion.a
-                href="/path/to/Тех_райдер_Ahmed_Shad-a.docx"
+                href="https://uca7d312d74adfe0b6357d805ea1.dl.dropboxusercontent.com/cd/0/get/Chn391Oau5RyK5nTvtpjThuUXu0rG_TuFDL5xcsJ4QmoDOQ9K_TtpCunN8kVLDxLAmeIDjTJR1PYdxKSYOwtC0BgZfWOI64z6Os9XdPuh3IdYOs6pt0L-LgaPN8dJt9hj2ClUQC9uyQKwWHO_oO9_wY9TVWtTPmT9nhOb4rh2X3w7A/file?_download_id=8923887961912711663425663150344863102375538294852838299576935055&_log_download_success=1"
                 download
                 whileHover={{
                   scale: 1.05,
@@ -478,108 +481,50 @@ const Homepage = () => {
       </section>
 
       {/* Концерты с интерактивным дизайном */}
-      <section className="relative py-12 sm:py-24">
+      <section className="relative py-12 sm:py-24 min-h-screen flex items-center">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,0,0,0.1),transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,0,255,0.1),transparent_50%)]" />
 
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            className="text-center mb-10 sm:mb-20"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <h2 className="relative inline-block">
+            {/* Main Title */}
+            <div className="relative inline-block mb-12">
               <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-blue-600 via-red-500 to-purple-600 opacity-30" />
               <span className="relative text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter">
                 TOUR'25
               </span>
-            </h2>
-          </motion.div>
+            </div>
 
-          <div className="grid grid-cols-1 gap-4 sm:gap-6">
-            {concerts.map((concert, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                className="group"
-              >
-                <div className="relative bg-gradient-to-r from-black via-gray-900 to-black p-1 rounded-lg sm:rounded-2xl overflow-hidden">
-                  {/* Hover Effects */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-red-500 to-purple-500 opacity-0 group-hover:opacity-20 transition-opacity duration-500" />
+            {/* Coming Soon Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="space-y-8"
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
+                Туры скоро начинаются
+              </h2>
 
-                  <div className="relative bg-black rounded-lg sm:rounded-2xl">
-                    <div className="flex flex-col sm:flex-row items-stretch">
-                      {/* Left Section - Date */}
-                      <div className="w-full sm:w-32 md:w-48 p-4 sm:p-6 flex flex-col justify-center items-center border-b sm:border-b-0 sm:border-r border-white/10">
-                        <div className="text-center">
-                          <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-br from-white to-gray-500 bg-clip-text text-transparent">
-                            {concert.date.split(" ")[0]}
-                          </div>
-                          <div className="text-base sm:text-lg md:text-xl text-gray-500 uppercase tracking-wider">
-                            {concert.date.split(" ")[1]}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Middle Section - Concert Info */}
-                      <div className="flex-grow p-4 sm:p-6 flex flex-col justify-center">
-                        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4">
-                          <div>
-                            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
-                              {concert.city}
-                            </h3>
-                            <div className="flex items-center gap-2 text-gray-400">
-                              <MapPin className="w-4 h-4" />
-                              <span className="text-base sm:text-lg">
-                                {concert.venue}
-                              </span>
-                            </div>
-                          </div>
-
-                          <div className="flex flex-col items-start sm:items-end gap-2 sm:gap-3">
-                            <span
-                              className={`
-                                px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-medium
-                                ${
-                                  concert.tickets === "Почти распроданы"
-                                    ? "bg-amber-500/10 text-amber-300 border border-amber-500/20"
-                                    : "bg-emerald-500/10 text-emerald-300 border border-emerald-500/20"
-                                }
-                              `}
-                            >
-                              {concert.tickets}
-                            </span>
-                            <p className="text-xs sm:text-sm text-gray-500 italic">
-                              {concert.mood}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Right Section - New Button Design */}
-                      <div className="w-full sm:w-48 md:w-64 p-4 sm:p-6 flex items-center justify-center border-t sm:border-t-0 sm:border-l border-white/10">
-                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="w-full relative group/btn"
-                        >
-                          <div className="absolute -inset-[2px] bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 rounded-lg sm:rounded-xl blur-sm opacity-70 group-hover/btn:opacity-100 transition-opacity" />
-                          <div className="relative flex items-center justify-between bg-black px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl border border-white/10">
-                            <span className="text-sm sm:text-base font-bold text-white">
-                              КУПИТЬ БИЛЕТ →
-                            </span>
-                          </div>
-                        </motion.button>
-                      </div>
-                    </div>
+              {/* Decorative Element */}
+              <div className="max-w-2xl mx-auto">
+                <div className="relative p-1 rounded-xl overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-red-500 to-purple-500 opacity-20 group-hover:opacity-30 transition-opacity duration-500" />
+                  <div className="relative bg-black/50 backdrop-blur-sm rounded-lg p-6 text-center">
+                    <p className="text-lg sm:text-xl text-gray-300">
+                      Готовьтесь к незабываемому музыкальному путешествию
+                    </p>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
