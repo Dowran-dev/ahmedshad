@@ -40,7 +40,7 @@ const ImageGallery = ({ images }) => {
               <img
                 src={image}
                 alt={`Gallery ${index + 1}`}
-                className="w-full h-full object-cover cursor-pointer"
+                className="w-full h-full object-fit cursor-pointer"
                 onClick={() => openModal(image, index)}
               />
             </motion.div>
