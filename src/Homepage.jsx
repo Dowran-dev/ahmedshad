@@ -342,7 +342,7 @@ const Homepage = () => {
               </div>
 
               <motion.a
-                href="https://uca7d312d74adfe0b6357d805ea1.dl.dropboxusercontent.com/cd/0/get/Chn391Oau5RyK5nTvtpjThuUXu0rG_TuFDL5xcsJ4QmoDOQ9K_TtpCunN8kVLDxLAmeIDjTJR1PYdxKSYOwtC0BgZfWOI64z6Os9XdPuh3IdYOs6pt0L-LgaPN8dJt9hj2ClUQC9uyQKwWHO_oO9_wY9TVWtTPmT9nhOb4rh2X3w7A/file?_download_id=8923887961912711663425663150344863102375538294852838299576935055&_log_download_success=1"
+                href="/Тех_райдер_AhmedShad-a.docx"
                 download
                 whileHover={{
                   scale: 1.05,
