@@ -22,6 +22,7 @@ import HeroSection from "./HeroSection";
 import logo from "./logo.png";
 import Header from "./Header";
 import ImageGallery from "./ImageGallery";
+import YoutubeSection from "./components/YoutubeSection";
 
 const Homepage = () => {
   const [activeTrack, setActiveTrack] = useState(null);
@@ -111,7 +112,7 @@ const Homepage = () => {
       "Артист с ярким сценическим образом, который привносит в каждое выступление энергию и особую атмосферу",
     contact: {
       representative: "Эльза",
-      phone: "8(987)135-88-82",
+      phone: "+79603928796",
       email: "a.elza1@mail.ru",
     },
   };
@@ -237,6 +238,8 @@ const Homepage = () => {
 
       <ArtistAboutSection artistInfo={artistInfo}></ArtistAboutSection>
 
+      <YoutubeSection />
+
       <ImageGallery images={images}></ImageGallery>
 
       {/* Enhanced Achievements Section */}
@@ -307,7 +310,7 @@ const Homepage = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-red-900/10 opacity-50"></div>
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl px-4 sm:px-8 mx-auto relative z-10">
           <motion.h2
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}

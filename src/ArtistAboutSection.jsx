@@ -18,37 +18,35 @@ import {
 
 import profilImage from "./ahmedshad.png";
 
-import thumbnail2 from "./thumbnail2.png";
-
 import thumbnail4 from "./thumbnail4.png";
 
 const placeholderVideos = [
-  {
-    src: "https://www.dropbox.com/scl/fi/5y4bqwwyofpx3pr93i436/IMG_4782.MOV?rlkey=2wk9edtc05pmabctf8v2luoo3&st=bew5ulac&raw=1",
-    thumbnail:
-      "https://dl.dropboxusercontent.com/scl/fi/94eiqdzldeb0o79ghjevt/thumbnail.png?rlkey=i1f108bdzpvdu1y0vrsx2dxvx&st=tgh2qcku&dl=0",
-    title: "Живой концерт в Новороссийске 2024",
-    venue: "Концерт Холл",
-    duration: "2:15:00",
-    views: "125K",
-  },
-  {
-    src: "https://www.dropbox.com/scl/fi/dbjloc5qcwxv57mcdd7kh/ahmedshad2.mp4?rlkey=g2pnvl00ajmtfqa9vg8xbm3g5&st=nkmgtvyg&raw=1",
-    thumbnail: thumbnail2,
-    title: "Фестиваль музыки 2024",
-    venue: "Парк Горького",
-    duration: "1:45:00",
-    views: "98K",
-  },
-  {
-    src: "https://www.dropbox.com/scl/fi/43ny2x2z6g772dfbz2hgp/IMG_9904.MOV?rlkey=epi1vloa9lz9g9g4msxale58r&st=50bo2fzt&raw=1",
-    thumbnail:
-      "https://dl.dropboxusercontent.com/scl/fi/szpl64c3p8jlnqex4lcu9/thumbnail3.png?rlkey=6dd9qupqg26knb0oeelkb1i2a&st=0sjnoj9m&dl=0",
-    title: "Сольный концерт",
-    venue: "GlavClub",
-    duration: "1:30:00",
-    views: "156K",
-  },
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/5y4bqwwyofpx3pr93i436/IMG_4782.MOV?rlkey=2wk9edtc05pmabctf8v2luoo3&st=bew5ulac&raw=1",
+  //   thumbnail:
+  //     "https://dl.dropboxusercontent.com/scl/fi/94eiqdzldeb0o79ghjevt/thumbnail.png?rlkey=i1f108bdzpvdu1y0vrsx2dxvx&st=tgh2qcku&dl=0",
+  //   title: "Живой концерт в Новороссийске 2024",
+  //   venue: "Концерт Холл",
+  //   duration: "2:15:00",
+  //   views: "125K",
+  // },
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/dbjloc5qcwxv57mcdd7kh/ahmedshad2.mp4?rlkey=g2pnvl00ajmtfqa9vg8xbm3g5&st=nkmgtvyg&raw=1",
+  //   thumbnail: thumbnail2,
+  //   title: "Фестиваль музыки 2024",
+  //   venue: "Парк Горького",
+  //   duration: "1:45:00",
+  //   views: "98K",
+  // },
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/43ny2x2z6g772dfbz2hgp/IMG_9904.MOV?rlkey=epi1vloa9lz9g9g4msxale58r&st=50bo2fzt&raw=1",
+  //   thumbnail:
+  //     "https://dl.dropboxusercontent.com/scl/fi/szpl64c3p8jlnqex4lcu9/thumbnail3.png?rlkey=6dd9qupqg26knb0oeelkb1i2a&st=0sjnoj9m&dl=0",
+  //   title: "Сольный концерт",
+  //   venue: "GlavClub",
+  //   duration: "1:30:00",
+  //   views: "156K",
+  // },
   {
     src: "https://www.dropbox.com/scl/fi/7507mblngjnfd7vdmvju0/ahmedshad4.mp4?rlkey=fjtza2eufryvihtzdqdk4n2ec&st=8c7on55m&raw=1",
     thumbnail: thumbnail4,
@@ -58,50 +56,78 @@ const placeholderVideos = [
     views: "203K",
   },
   {
-    src: "https://www.dropbox.com/scl/fi/spvp04dw5l1x25zx8ulx5/IMG_9906-1.MOV?rlkey=64ptimtrn1vaehqg1am3vew67&st=ik3ysqjo&raw=1",
+    src: "https://www.dropbox.com/scl/fi/22oki1a7uloj9x2xd7u1q/IMG_6462.MOV?rlkey=4mhdqbqqdd6y4v9q81x4vpvyc&st=0uubfi4a&raw=1",
     thumbnail:
-      "https://dl.dropboxusercontent.com/scl/fi/0f9silj32givy2jxjey2l/thumbnail5.png?rlkey=3nlzx6nkld07bzyrzrtqqld0t&st=9ol0e2k5&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/v27sceerxengkeafht985/thumbnail11.png?rlkey=5s1m1zi9r7lm4twkzqgs6ngwj&st=vicxvqym&dl=0",
     title: "Новогодний концерт",
     venue: "ВТБ Арена",
     duration: "2:00:00",
     views: "203K",
   },
   {
-    src: "https://www.dropbox.com/scl/fi/n6kgcpp7waht6ike03on2/IMG_9918.MOV?rlkey=he89w39x0qnerrciotpb3hfnp&st=kr1hquie&raw=1",
+    src: "https://www.dropbox.com/scl/fi/gukvkghvntnkf0gjlweuv/IMG_6465.MOV?rlkey=nh28fgl4t6df63j2rn43bd0b0&st=61xkt46b&raw=1",
     thumbnail:
-      "https://dl.dropboxusercontent.com/scl/fi/amkno41z1063le7nvgrd6/thumbnail6.png?rlkey=tcpjni9y2duofj7t6brqepfk3&st=85urfk95&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/tf6t7l0itth9qxnzjpkm8/thumbnail10.png?rlkey=yekyspyexmcexhvsni8nng2o5&st=rpyfqr7j&dl=0",
     title: "Новогодний концерт",
     venue: "ВТБ Арена",
     duration: "2:00:00",
     views: "203K",
   },
   {
-    src: "https://www.dropbox.com/scl/fi/isu4yxhvuy75x0kcz3qky/IMG_9919.MOV?rlkey=uemaplbbesn45ia85sfsi4kar&st=6n27rml0&raw=1",
+    src: "https://www.dropbox.com/scl/fi/g85w4x8xr4yeus0fb7e1b/IMG_6464.MOV?rlkey=6ci617ltsseo688m3a0vqt3ln&st=d3k18nes&raw=1",
     thumbnail:
-      "https://dl.dropboxusercontent.com/scl/fi/foppz3h4x73w6eshz6bay/thumbnail7.png?rlkey=hiubs8rxfuwemmen1lyva5ssg&st=69u13v7q&dl=0",
+      "https://dl.dropboxusercontent.com/scl/fi/wb7bu3u54tsm9or045tpq/thumbnail1.png?rlkey=ov7ywnmhk7jj6xpj4b6sjqo2o&st=vp5gd8hp&dl=0",
     title: "Новогодний концерт",
     venue: "ВТБ Арена",
     duration: "2:00:00",
     views: "203K",
   },
-  {
-    src: "https://www.dropbox.com/scl/fi/r198owm55ob4cnmy95k6f/IMG_9955.MOV?rlkey=aryuzayne4naeftxezb0xalzu&st=1cldfzid&raw=1",
-    thumbnail:
-      "https://dl.dropboxusercontent.com/scl/fi/x0ew9qel9g9nquy33zawm/thumbnail8.png?rlkey=zuc4ltdjm37ivh576dwbhovq7&st=hw49hzid&dl=0",
-    title: "Новогодний концерт",
-    venue: "ВТБ Арена",
-    duration: "2:00:00",
-    views: "203K",
-  },
-  {
-    src: "https://www.dropbox.com/scl/fi/rdzy755a7pj208m8priaj/WhatsApp-Video-2024-12-10-at-23.08.45.mp4?rlkey=kex6ftr44zj78ftgpjc4i0qne&st=g90hq5ur&raw=1",
-    thumbnail:
-      "https://dl.dropboxusercontent.com/scl/fi/10aykra2uq3u5tqjc4vgg/thumbnail9.png?rlkey=9oxxjc80xcx41smkjmig33g25&st=5me3c7r9&dl=0",
-    title: "Новогодний концерт",
-    venue: "ВТБ Арена",
-    duration: "2:00:00",
-    views: "203K",
-  },
+
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/spvp04dw5l1x25zx8ulx5/IMG_9906-1.MOV?rlkey=64ptimtrn1vaehqg1am3vew67&st=ik3ysqjo&raw=1",
+  //   thumbnail:
+  //     "https://dl.dropboxusercontent.com/scl/fi/0f9silj32givy2jxjey2l/thumbnail5.png?rlkey=3nlzx6nkld07bzyrzrtqqld0t&st=9ol0e2k5&dl=0",
+  //   title: "Новогодний концерт",
+  //   venue: "ВТБ Арена",
+  //   duration: "2:00:00",
+  //   views: "203K",
+  // },
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/n6kgcpp7waht6ike03on2/IMG_9918.MOV?rlkey=he89w39x0qnerrciotpb3hfnp&st=kr1hquie&raw=1",
+  //   thumbnail:
+  //     "https://dl.dropboxusercontent.com/scl/fi/amkno41z1063le7nvgrd6/thumbnail6.png?rlkey=tcpjni9y2duofj7t6brqepfk3&st=85urfk95&dl=0",
+  //   title: "Новогодний концерт",
+  //   venue: "ВТБ Арена",
+  //   duration: "2:00:00",
+  //   views: "203K",
+  // },
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/isu4yxhvuy75x0kcz3qky/IMG_9919.MOV?rlkey=uemaplbbesn45ia85sfsi4kar&st=6n27rml0&raw=1",
+  //   thumbnail:
+  //     "https://dl.dropboxusercontent.com/scl/fi/foppz3h4x73w6eshz6bay/thumbnail7.png?rlkey=hiubs8rxfuwemmen1lyva5ssg&st=69u13v7q&dl=0",
+  //   title: "Новогодний концерт",
+  //   venue: "ВТБ Арена",
+  //   duration: "2:00:00",
+  //   views: "203K",
+  // },
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/r198owm55ob4cnmy95k6f/IMG_9955.MOV?rlkey=aryuzayne4naeftxezb0xalzu&st=1cldfzid&raw=1",
+  //   thumbnail:
+  //     "https://dl.dropboxusercontent.com/scl/fi/x0ew9qel9g9nquy33zawm/thumbnail8.png?rlkey=zuc4ltdjm37ivh576dwbhovq7&st=hw49hzid&dl=0",
+  //   title: "Новогодний концерт",
+  //   venue: "ВТБ Арена",
+  //   duration: "2:00:00",
+  //   views: "203K",
+  // },
+  // {
+  //   src: "https://www.dropbox.com/scl/fi/rdzy755a7pj208m8priaj/WhatsApp-Video-2024-12-10-at-23.08.45.mp4?rlkey=kex6ftr44zj78ftgpjc4i0qne&st=g90hq5ur&raw=1",
+  //   thumbnail:
+  //     "https://dl.dropboxusercontent.com/scl/fi/10aykra2uq3u5tqjc4vgg/thumbnail9.png?rlkey=9oxxjc80xcx41smkjmig33g25&st=5me3c7r9&dl=0",
+  //   title: "Новогодний концерт",
+  //   venue: "ВТБ Арена",
+  //   duration: "2:00:00",
+  //   views: "203K",
+  // },
 ];
 
 // ... [MobileVideoModal component remains the same]
@@ -279,9 +305,6 @@ const ArtistAboutSection = ({ artistInfo }) => {
                 <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-2">
                   {artistInfo?.name || "Artist Name"}
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-400">
-                  {artistInfo?.title || "Artist Title"}
-                </p>
               </div>
             </motion.div>
 
