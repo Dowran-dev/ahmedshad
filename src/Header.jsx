@@ -19,6 +19,13 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToConcerts = () => {
+    const concertsSection = document.getElementById("concerts_section");
+    if (concertsSection) {
+      concertsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.header
       initial={{ opacity: 0 }}
@@ -42,6 +49,27 @@ const Header = () => {
           </motion.div>
 
           {/* Desktop Navigation */}
+          {/* <nav className="hidden md:block">
+            <div className="backdrop-blur-xl bg-white/5 rounded-full px-8 py-3 border border-white/10">
+              <div className="flex space-x-8">
+                {["Музыка", "Концерты", "Медиа", "О себе"].map(
+                  (item, index) => (
+                    <motion.a
+                      key={index}
+                      href={`#${item.toLowerCase()}`}
+                      className="text-sm font-medium uppercase tracking-wider text-gray-300 hover:text-white transition-all"
+                      whileHover={{
+                        scale: 1.1,
+                        color: "#FFFFFF",
+                      }}
+                    >
+                      {item}
+                    </motion.a>
+                  )
+                )}
+              </div>
+            </div>
+          </nav> */}
           <nav className="hidden md:block">
             <div className="backdrop-blur-xl bg-white/5 rounded-full px-8 py-3 border border-white/10">
               <div className="flex space-x-8">
@@ -55,6 +83,9 @@ const Header = () => {
                         scale: 1.1,
                         color: "#FFFFFF",
                       }}
+                      onClick={
+                        item === "Концерты" ? scrollToConcerts : undefined
+                      }
                     >
                       {item}
                     </motion.a>
@@ -92,7 +123,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
+      {/* {isMenuOpen && (
         <motion.nav
           className="md:hidden absolute top-full left-0 right-0 bg-black/80 backdrop-blur-lg border-t border-white/10"
           initial={{ opacity: 0, y: -20 }}
@@ -107,6 +138,32 @@ const Header = () => {
                 className="block text-lg font-medium text-gray-300 hover:text-white transition-all"
                 whileHover={{ x: 10 }}
                 onClick={() => setIsMenuOpen(false)}
+              >
+                {item}
+              </motion.a>
+            ))}
+          </div>
+        </motion.nav>
+      )} */}
+
+      {isMenuOpen && (
+        <motion.nav
+          className="md:hidden absolute top-full left-0 right-0 bg-black/80 backdrop-blur-lg border-t border-white/10"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+        >
+          <div className="px-4 py-6 space-y-4">
+            {["Музыка", "Концерты", "Медиа", "О себе"].map((item, index) => (
+              <motion.a
+                key={index}
+                href={`#${item.toLowerCase()}`}
+                className="block text-lg font-medium text-gray-300 hover:text-white transition-all"
+                whileHover={{ x: 10 }}
+                onClick={() => {
+                  if (item === "Концерты") scrollToConcerts();
+                  setIsMenuOpen(false);
+                }}
               >
                 {item}
               </motion.a>

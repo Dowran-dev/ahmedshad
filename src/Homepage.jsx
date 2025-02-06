@@ -112,192 +112,14 @@ const Homepage = () => {
 
   return (
     <div className="bg-black text-white min-h-screen font-display overflow-x-hidden select-none">
-      {/* Иммерсивный Header */}
-      {/* <motion.header
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-        className="fixed top-0 left-0 right-0 z-50 p-6"
-      >
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <motion.h1
-            className="text-4xl font-black tracking-wider"
-            whileHover={{
-              scale: 1.05,
-              textShadow: "0 0 20px rgba(255,255,255,0.5)",
-            }}
-          >
-            <img src={logo} alt="logo" className={"w-20 h-14"} />
-          </motion.h1>
-
-          <nav className="backdrop-blur-xl bg-black/40 rounded-full px-8 py-3">
-            <div className="flex space-x-8">
-              {["Музыка", "Концерты", "Медиа", "О себе"].map((item, index) => (
-                <motion.a
-                  key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-sm uppercase tracking-widest text-gray-300 hover:text-white transition-all"
-                  whileHover={{
-                    scale: 1.1,
-                    color: "#FFFFFF",
-                  }}
-                >
-                  {item}
-                </motion.a>
-              ))}
-            </div>
-          </nav>
-        </div>
-      </motion.header> */}
-      <Header></Header>
-
+      <Header />
       <HeroSection />
-
-      {/* Enhanced "About Me" Section */}
-      {/* <section id="о себе" className="py-24 bg-black relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-red-900/10 opacity-50"></div>
-
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-
-          <div className="w-full max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="bg-white/5 rounded-3xl p-12 border border-white/10 backdrop-blur-xl shadow-2xl"
-            >
-              <div className="flex items-center mb-12">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="bg-red-600/20 rounded-full mr-6"
-                >
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt_oslzhW7__ec0Hh_qgWgTN5PSKfebE1sHg&s"
-                    alt="фото Ахмеда"
-                    className={"w-20 h-20 object-cover rounded-full"}
-                  />
-
-                </motion.div>
-                <h3 className="text-4xl font-bold bg-clip-text text-white">
-                  {artistInfo.name}
-                </h3>
-              </div>
-
-              <div className="space-y-8 text-gray-300">
-                {[
-                  {
-                    icon: Target,
-                    title: "Жанры",
-                    content: artistInfo.genres.join(", "),
-                  },
-                  {
-                    icon: Star,
-                    title: "Формат выступлений",
-                    content: artistInfo.performanceFormat,
-                  },
-                  {
-                    icon: CheckCircle,
-                    title: "Опыт",
-                    content: artistInfo.experience,
-                  },
-                  {
-                    icon: Award,
-                    title: "Артистический стиль",
-                    content: artistInfo.description,
-                  },
-                ].map((section, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.2 }}
-                    className="border-l-4 border-red-200 pl-6 py-2 hover:bg-white/5 transition-all"
-                  >
-                    <div className="flex items-center mb-2">
-                      <section.icon className="w-8 h-8 mr-4 text-red-500" />
-                      <h4 className="text-2xl font-semibold text-white">
-                        {section.title}
-                      </h4>
-                    </div>
-                    <p className="text-gray-400">{section.content}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section> */}
-
       <ArtistAboutSection artistInfo={artistInfo}></ArtistAboutSection>
-
       <YoutubeSection />
-
       <ImageGallery images={images}></ImageGallery>
 
-      {/* Enhanced Achievements Section */}
-      <section
-        id="достижения"
-        className="py-12 sm:py-24 bg-black relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-red-900/10 opacity-50"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
-          <motion.h2
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="text-3xl sm:text-4xl md:text-6xl font-black text-center mb-8 sm:mb-16 text-transparent bg-clip-text text-white"
-          >
-            Достижения
-          </motion.h2>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            className="bg-white/5 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-16 border border-white/10 backdrop-blur-xl shadow-2xl"
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
-              {[
-                {
-                  icon: Award,
-                  title: "Концертная деятельность",
-                  description:
-                    "Участие в концертных программах, ресторанах и на частных мероприятиях",
-                },
-                {
-                  icon: Star,
-                  title: "Зрительская оценка",
-                  description:
-                    "Высокие оценки зрителей за живое исполнение и энергетику",
-                },
-              ].map((achievement, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.3 }}
-                  className="bg-white/10 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/20 hover:bg-white/20 transition-all"
-                >
-                  <div className="flex items-center mb-4 sm:mb-6">
-                    <div className="bg-red-600/20 p-2 sm:p-4 rounded-full mr-4 sm:mr-6">
-                      <achievement.icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-red-500" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
-                      {achievement.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-300 text-base sm:text-lg md:text-xl">
-                    {achievement.description}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Динамическая секция альбомов */}
-      <section className="py-12 sm:py-16 md:py-24 bg-black px-4 sm:px-6 md:px-8">
+      {/* <section className="py-12 sm:py-16 md:py-24 bg-black px-4 sm:px-6 md:px-8">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, x: -50 }}
@@ -383,10 +205,10 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Концерты с интерактивным дизайном */}
-      <section className="relative py-12 sm:py-24">
+      <section className="relative py-12 sm:py-24" id="concerts_section">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,0,0,0.1),transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,0,255,0.1),transparent_50%)]" />
@@ -474,8 +296,8 @@ const Homepage = () => {
                           whileTap={{ scale: 0.98 }}
                           className="w-full relative group/btn"
                         >
-                          <div className="absolute -inset-[2px] bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 rounded-lg sm:rounded-xl blur-sm opacity-70 group-hover/btn:opacity-100 transition-opacity" />
-                          <div className="relative flex items-center justify-between bg-black px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl border border-white/10">
+                          <div className="absolute -inset-[2px] bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg sm:rounded-xl blur-sm opacity-70 group-hover/btn:opacity-100 transition-opacity" />
+                          <div className="relative flex items-center justify-between bg-gradient-to-r from-orange-400 to-yellow-400 px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl">
                             <a
                               href="https://widget.kassir.ru/?type=A&key=5c72bfc2-821f-94a8-cfb1-38ba41f21855&domain=ufa.kassir.ru&id=237476"
                               onClick={(e) => {
@@ -501,7 +323,7 @@ const Homepage = () => {
                                 }
                                 return false;
                               }}
-                              className="widget-tr text-sm sm:text-base font-bold text-white"
+                              className="widget-tr text-sm sm:text-base font-bold text-black"
                               target="_blank"
                               rel="noopener noreferrer"
                             >
@@ -516,6 +338,67 @@ const Homepage = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Enhanced Achievements Section */}
+      <section
+        id="достижения"
+        className="py-12 sm:py-24 bg-black relative overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-black/80 to-red-900/10 opacity-50"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 relative z-10">
+          <motion.h2
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            className="text-3xl sm:text-4xl md:text-6xl font-black text-center mb-8 sm:mb-16 text-transparent bg-clip-text text-white"
+          >
+            Достижения
+          </motion.h2>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="bg-white/5 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-16 border border-white/10 backdrop-blur-xl shadow-2xl"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
+              {[
+                {
+                  icon: Award,
+                  title: "Концертная деятельность",
+                  description:
+                    "Участие в концертных программах, ресторанах и на частных мероприятиях",
+                },
+                {
+                  icon: Star,
+                  title: "Зрительская оценка",
+                  description:
+                    "Высокие оценки зрителей за живое исполнение и энергетику",
+                },
+              ].map((achievement, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.3 }}
+                  className="bg-white/10 p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/20 hover:bg-white/20 transition-all"
+                >
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <div className="bg-red-600/20 p-2 sm:p-4 rounded-full mr-4 sm:mr-6">
+                      <achievement.icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-red-500" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white">
+                      {achievement.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-300 text-base sm:text-lg md:text-xl">
+                    {achievement.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 

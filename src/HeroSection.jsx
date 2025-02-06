@@ -18,8 +18,15 @@ const HeroSection = () => {
     }
   };
 
+  const scrollToConcerts = () => {
+    const concertsSection = document.getElementById("concerts_section");
+    if (concertsSection) {
+      concertsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="relative h-screen w-full overflow-hidden bg-black">
+    <div className="relative h-[90vh] sm:h-screen w-full overflow-hidden bg-black">
       {/* Video Background with Grain Overlay */}
       <video
         id="background-video"
@@ -49,61 +56,43 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-8 sm:gap-0 pb-20 sm:pb-28"
+          className="container mx-auto pb-12 sm:pb-24"
         >
+          <div className="flex flex-col sm:flex-row gap-4 mb-6 sm:mb-8">
+            <button
+              onClick={scrollToConcerts}
+              className="w-full sm:w-auto px-6 py-3 bg-gradient-to-r from-orange-400 to-yellow-400 text-black font-semibold rounded-3xl hover:from-orange-500 hover:to-yellow-500 transition-all duration-300 flex items-center justify-center sm:justify-start gap-2"
+            >
+              Купить билеты
+              <MoveUpRight className="w-5 h-5" />
+            </button>
+          </div>
+
           {/* Main Heading */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="relative text-center sm:text-left"
+            className="relative inline-block"
           >
-            <h1 className="text-[50px] sm:text-[80px] md:text-[100px] font-black text-white tracking-tight leading-none">
+            <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter">
               Ahmed Shad
             </h1>
             <div className="absolute -inset-x-4 -inset-y-2 bg-gradient-to-r from-red-500 to-orange-500 opacity-20 blur-3xl -z-10" />
           </motion.div>
-
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="w-full sm:w-auto"
-          >
-            <button className="w-full sm:w-auto group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-white/30 bg-black/20 px-8 sm:px-12 py-3 sm:py-4 backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/10">
-              <span className="relative text-xl sm:text-2xl tracking-wider text-white">
-                Туры
-              </span>
-              <motion.div
-                whileHover={{ x: 4 }}
-                className="relative ml-2 text-white"
-              >
-                <MoveUpRight
-                  className={"w-5 h-5 sm:w-6 sm:h-6"}
-                  strokeWidth={1.6}
-                />
-              </motion.div>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-red-500/20 to-orange-500/20 opacity-0 transition group-hover:opacity-100" />
-            </button>
-          </motion.div>
         </motion.div>
-      </div>
 
-      {/* Sound Toggle */}
-      <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        onClick={toggleMute}
-        className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 z-20 rounded-full bg-white/10 p-2 sm:p-3 backdrop-blur-sm transition-all hover:bg-white/20"
-      >
-        {isMuted ? (
-          <VolumeX className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-        ) : (
-          <Volume2 className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-        )}
-      </motion.button>
+        {/* Sound Toggle Button */}
+        <button
+          onClick={toggleMute}
+          className="absolute top-4 right-4 p-2 rounded-full bg-black/20 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all z-50"
+        >
+          {isMuted ? (
+            <VolumeX className="w-6 h-6" />
+          ) : (
+            <Volume2 className="w-6 h-6" />
+          )}
+        </button>
+      </div>
     </div>
   );
 };
