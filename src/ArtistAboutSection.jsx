@@ -280,7 +280,10 @@ const ArtistAboutSection = ({ artistInfo }) => {
   };
 
   return (
-    <section className="min-h-screen py-8 sm:py-16 bg-gradient-to-b from-zinc-950 via-black to-zinc-950">
+    <section
+      className="min-h-screen py-8 sm:py-16 bg-gradient-to-b from-zinc-950 via-black to-zinc-950"
+      id="about_section"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Artist Info Section */}
         <motion.div

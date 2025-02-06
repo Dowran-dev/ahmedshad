@@ -231,7 +231,7 @@ const videos = [
   },
 ];
 
-const YoutubeSection = () => {
+const YoutubeSection = ({ id }) => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -322,7 +322,10 @@ const YoutubeSection = () => {
   };
 
   return (
-    <div className="min-h-[600px] max-w-7xl mx-auto bg-[#1f1f1f] rounded-2xl relative overflow-hidden px-4 sm:px-8">
+    <div
+      className="min-h-[600px] max-w-7xl mx-auto bg-[#1f1f1f] rounded-2xl relative overflow-hidden px-4 sm:px-8"
+      id={id}
+    >
       <div className="p-4 sm:p-8 flex flex-col">
         {/* Left Content */}
         <div className="space-y-4 sm:space-y-8 relative z-10">

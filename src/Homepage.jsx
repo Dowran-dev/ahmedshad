@@ -23,6 +23,7 @@ import logo from "./logo.png";
 import Header from "./Header";
 import ImageGallery from "./ImageGallery";
 import YoutubeSection from "./components/YoutubeSection";
+import Footer from "./components/Footer";
 
 const Homepage = () => {
   const [activeTrack, setActiveTrack] = useState(null);
@@ -39,14 +40,41 @@ const Homepage = () => {
   };
 
   const images = [
-    "https://dl.dropboxusercontent.com/scl/fi/y1chxr3qzanooeipfqrn3/albom1.jpg?rlkey=4t8t2uk2hreauqd23a6vdfhjm&st=lslnfoon&dl=0",
-    "https://dl.dropboxusercontent.com/scl/fi/qhb5htj6qba4hgh04dhdt/albom2.jpg?rlkey=iuidpah02chxxdrzvlqhg9mv8&st=vztvr3nl&dl=0",
-    "https://dl.dropboxusercontent.com/scl/fi/6xhbjow25ue98orbfl4de/albom3.jpg?rlkey=d1wsw7hom3ss50z88ruwyernq&st=9xxrk71m&dl=0",
-    // "https://dl.dropboxusercontent.com/scl/fi/3aru5f9zhht4wto9y6xan/albom4.jpg?rlkey=8m4pvintzg7xq604nw9obhbw2&st=ul3x64ly&dl=0",
-    "https://dl.dropboxusercontent.com/scl/fi/veoeq5nky9hdi4f5orrl2/albom5.jpg?rlkey=4smjhtnct4pfeelyytvm2wffn&st=bn57dpay&dl=0",
-    "https://dl.dropboxusercontent.com/scl/fi/blgcniqyg1h13euqz6lh3/albom6.jpg?rlkey=glf8w960ahkcdyts5q8nvq8uz&st=6qzpaqv3&dl=0",
-    "https://dl.dropboxusercontent.com/scl/fi/ux9dshnta48qx0jhkk5cn/NuQpGT4yG4U.jpg?rlkey=zejjap21mt82ez56r3oz7l7c6&st=48ioikwm&dl=0",
-    "https://dl.dropboxusercontent.com/scl/fi/52fxkeigbynyhfkrlbafa/qXBDxZUEig0.jpg?rlkey=w1b1fbcbviol8jyo51cnfg3a6&st=0nerltri&dl=0",
+    {
+      full: "https://dl.dropboxusercontent.com/scl/fi/y1chxr3qzanooeipfqrn3/albom1.jpg?rlkey=4t8t2uk2hreauqd23a6vdfhjm&st=lslnfoon&dl=0",
+      thumbnail:
+        "https://dl.dropboxusercontent.com/scl/fi/1oefgwox96tmwpkci70se/thumbnail_1.png?rlkey=zzpwsjmh7bnv7f91d5gnjzasi&st=t28b5rn2&dl=0",
+    },
+    {
+      full: "https://dl.dropboxusercontent.com/scl/fi/qhb5htj6qba4hgh04dhdt/albom2.jpg?rlkey=iuidpah02chxxdrzvlqhg9mv8&st=vztvr3nl&dl=0",
+      thumbnail:
+        "https://dl.dropboxusercontent.com/scl/fi/yq1trm9ef1d06tock9zy2/thumbnail_2.png?rlkey=zan659zyf9u7f415y8t2kriyi&st=jysr270p&dl=0",
+    },
+    {
+      full: "https://dl.dropboxusercontent.com/scl/fi/6xhbjow25ue98orbfl4de/albom3.jpg?rlkey=d1wsw7hom3ss50z88ruwyernq&st=9xxrk71m&dl=0",
+      thumbnail:
+        "https://dl.dropboxusercontent.com/scl/fi/8091xxt7iy7saalbmmrlq/thumbnail_3.png?rlkey=a1kp6a404pqyub1eazfqv7j4x&st=mwlse821&dl=0",
+    },
+    {
+      full: "https://dl.dropboxusercontent.com/scl/fi/veoeq5nky9hdi4f5orrl2/albom5.jpg?rlkey=4smjhtnct4pfeelyytvm2wffn&st=bn57dpay&dl=0",
+      thumbnail:
+        "https://dl.dropboxusercontent.com/scl/fi/lb9whwepxadf34fawyvnu/thumbnail_4.png?rlkey=zd0hhnu8tdl6xhtzi8j2cwgoq&st=vpx8okiq&dl=0",
+    },
+    {
+      full: "https://dl.dropboxusercontent.com/scl/fi/blgcniqyg1h13euqz6lh3/albom6.jpg?rlkey=glf8w960ahkcdyts5q8nvq8uz&st=6qzpaqv3&dl=0",
+      thumbnail:
+        "https://dl.dropboxusercontent.com/scl/fi/34ldl9cybp6wpj1o46af9/thumbnail_5.png?rlkey=ccc21ejlhdmjnfi4so28lbbc4&st=49gxm9yk&dl=0",
+    },
+    {
+      full: "https://dl.dropboxusercontent.com/scl/fi/ux9dshnta48qx0jhkk5cn/NuQpGT4yG4U.jpg?rlkey=zejjap21mt82ez56r3oz7l7c6&st=48ioikwm&dl=0",
+      thumbnail:
+        "https://dl.dropboxusercontent.com/scl/fi/kvdwb3z6vy1j752bpmdud/thumbnail_6.png?rlkey=ypyiob7mw8aynjonjygqasg7g&st=lpp96awd&dl=0",
+    },
+    {
+      full: "https://dl.dropboxusercontent.com/scl/fi/52fxkeigbynyhfkrlbafa/qXBDxZUEig0.jpg?rlkey=w1b1fbcbviol8jyo51cnfg3a6&st=0nerltri&dl=0",
+      thumbnail:
+        "https://dl.dropboxusercontent.com/scl/fi/kc55ersktwv8mmrj4h7q6/thumbnail_7.png?rlkey=626q5g1t22xh9p5efdn84guom&st=qf9frys2&dl=0",
+    },
   ];
 
   const albums = [
@@ -115,7 +143,7 @@ const Homepage = () => {
       <Header />
       <HeroSection />
       <ArtistAboutSection artistInfo={artistInfo}></ArtistAboutSection>
-      <YoutubeSection />
+      <YoutubeSection id="media_section" />
       <ImageGallery images={images}></ImageGallery>
 
       {/* Динамическая секция альбомов */}
@@ -291,46 +319,46 @@ const Homepage = () => {
 
                       {/* Right Section - New Button Design */}
                       <div className="w-full sm:w-48 md:w-64 p-4 sm:p-6 flex items-center justify-center border-t sm:border-t-0 sm:border-l border-white/10">
-                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="w-full relative group/btn"
+                        <a
+                          href="https://widget.kassir.ru/?type=A&key=5c72bfc2-821f-94a8-cfb1-38ba41f21855&domain=ufa.kassir.ru&id=237476"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            try {
+                              if (
+                                window.ksr &&
+                                typeof window.ksr.summon === "function"
+                              ) {
+                                window.ksr.summon({
+                                  width: 1000,
+                                  height: 1000,
+                                });
+                              } else {
+                                window.open(e.currentTarget.href, "_blank");
+                              }
+                            } catch (error) {
+                              console.error(
+                                "Failed to open Kassir widget:",
+                                error
+                              );
+                              window.open(e.currentTarget.href, "_blank");
+                            }
+                            return false;
+                          }}
+                          className="widget-tr text-sm sm:text-base font-bold text-black"
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          <div className="absolute -inset-[2px] bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg sm:rounded-xl blur-sm opacity-70 group-hover/btn:opacity-100 transition-opacity" />
-                          <div className="relative flex items-center justify-between bg-gradient-to-r from-orange-400 to-yellow-400 px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl">
-                            <a
-                              href="https://widget.kassir.ru/?type=A&key=5c72bfc2-821f-94a8-cfb1-38ba41f21855&domain=ufa.kassir.ru&id=237476"
-                              onClick={(e) => {
-                                e.preventDefault();
-                                try {
-                                  if (
-                                    window.ksr &&
-                                    typeof window.ksr.summon === "function"
-                                  ) {
-                                    window.ksr.summon({
-                                      width: 1000,
-                                      height: 1000,
-                                    });
-                                  } else {
-                                    window.open(e.currentTarget.href, "_blank");
-                                  }
-                                } catch (error) {
-                                  console.error(
-                                    "Failed to open Kassir widget:",
-                                    error
-                                  );
-                                  window.open(e.currentTarget.href, "_blank");
-                                }
-                                return false;
-                              }}
-                              className="widget-tr text-sm sm:text-base font-bold text-black"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                          <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            className="w-full relative group/btn"
+                          >
+                            <div className="absolute -inset-[2px] bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg sm:rounded-xl blur-sm opacity-70 group-hover/btn:opacity-100 transition-opacity" />
+                            <div className="relative flex items-center justify-between bg-gradient-to-r from-orange-400 to-yellow-400 px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl">
                               КУПИТЬ БИЛЕТ →
-                            </a>
-                          </div>
-                        </motion.button>
+                            </div>
+                          </motion.button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -402,72 +430,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Футер с современным подходом */}
-      <footer className="bg-black border-t border-white/10 py-24">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-16 px-8">
-          <div>
-            <h4 className="text-3xl font-bold mb-8">Контакты</h4>
-            <div>
-              <div className="text-white text-xl space-y-4">
-                <p className="font-semibold">
-                  Представитель: {artistInfo.contact.representative}
-                </p>
-                <motion.a
-                  href={`tel:${artistInfo.contact.phone}`}
-                  whileHover={{ x: 10, color: "white" }}
-                  className="block text-xl"
-                >
-                  {artistInfo.contact.phone}
-                </motion.a>
-                <motion.a
-                  href={`mailto:${artistInfo.contact.email}`}
-                  whileHover={{ x: 10, color: "white" }}
-                  className="block text-xl"
-                >
-                  {artistInfo.contact.email}
-                </motion.a>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-3xl font-bold mb-8">Соцсети</h4>
-            <div className="space-y-4">
-              {["Instagram", "VK", "TikTok", "YouTube"].map((social, idx) => (
-                <motion.a
-                  key={idx}
-                  href="#"
-                  whileHover={{
-                    x: 10,
-                    color: "white",
-                    transition: { duration: 0.3 },
-                  }}
-                  className="block text-gray-400 hover:text-white text-xl"
-                >
-                  {social}
-                </motion.a>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-3xl font-bold mb-8">Подписка</h4>
-            <div className="flex bg-white/5 rounded-full p-2">
-              <input
-                type="email"
-                placeholder="Ваш email"
-                className="w-full bg-transparent px-6 py-4 text-white placeholder-gray-500 focus:outline-none"
-              />
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                className="bg-red-600 text-white px-8 py-4 rounded-full"
-              >
-                →
-              </motion.button>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer artistInfo={artistInfo} />
     </div>
   );
 };

@@ -1,10 +1,11 @@
 // import React, { useState } from "react";
 // import { motion, AnimatePresence } from "framer-motion";
-// import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
+// import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 // const ImageGallery = ({ images }) => {
 //   const [selectedImage, setSelectedImage] = useState(null);
 //   const [currentIndex, setCurrentIndex] = useState(0);
+//   const [imageLoaded, setImageLoaded] = useState({});
 
 //   const openModal = (image, index) => {
 //     setSelectedImage(image);
@@ -21,34 +22,40 @@
 //     }
 //   };
 
+//   const handleImageLoad = (index) => {
+//     setImageLoaded((prev) => ({ ...prev, [index]: true }));
+//   };
+
 //   return (
 //     <section className="min-h-screen bg-zinc-950 py-12">
 //       <div className="max-w-7xl mx-auto px-4">
-//         {/* Image Grid with Auto Width and Fixed Height */}
-//         {/* <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12">
-//           Фотосессия
-//         </h3> */}
-//         <div className="flex flex-wrap gap-4">
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 //           {images.map((image, index) => (
 //             <motion.div
 //               key={index}
-//               className="relative rounded-lg overflow-hidden bg-zinc-800 h-[300px] md:h-[350px]"
-//               style={{ flex: "1 0 auto" }} // Fixed height, flexible width
+//               className="relative rounded-lg overflow-hidden bg-zinc-800 aspect-[4/4]"
 //               whileHover={{ scale: 1.02 }}
 //               transition={{ duration: 0.3 }}
 //             >
+//               {!imageLoaded[index] && (
+//                 <div className="absolute inset-0 flex items-center justify-center">
+//                   <div className="w-8 h-8 border-4 border-zinc-500 border-t-zinc-300 rounded-full animate-spin"></div>
+//                 </div>
+//               )}
 //               <img
 //                 src={image}
 //                 alt={`Gallery ${index + 1}`}
-//                 className="w-full h-full object-fit cursor-pointer"
+//                 className={`w-full h-full object-cover cursor-pointer transition-opacity duration-300 ${
+//                   imageLoaded[index] ? "opacity-100" : "opacity-0"
+//                 }`}
 //                 onClick={() => openModal(image, index)}
+//                 onLoad={() => handleImageLoad(index)}
+//                 loading="lazy"
 //               />
 //             </motion.div>
 //           ))}
 //         </div>
 
-//         {/* Modal */}
-//         {/* Modal */}
 //         <AnimatePresence>
 //           {selectedImage && (
 //             <motion.div
@@ -65,7 +72,6 @@
 //                 className="relative max-w-7xl w-full max-h-[90vh] flex items-center justify-center"
 //                 onClick={(e) => e.stopPropagation()}
 //               >
-//                 {/* Navigation Buttons */}
 //                 {currentIndex > 0 && (
 //                   <motion.button
 //                     whileHover={{ scale: 1.1 }}
@@ -94,7 +100,6 @@
 //                   </motion.button>
 //                 )}
 
-//                 {/* Close Button */}
 //                 <motion.button
 //                   whileHover={{ scale: 1.1 }}
 //                   whileTap={{ scale: 0.9 }}
@@ -104,7 +109,6 @@
 //                   <X className="w-6 h-6 text-white" />
 //                 </motion.button>
 
-//                 {/* Image */}
 //                 <motion.img
 //                   key={selectedImage}
 //                   src={selectedImage}
@@ -116,7 +120,6 @@
 //                   transition={{ duration: 0.2 }}
 //                 />
 
-//                 {/* Image Counter */}
 //                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm">
 //                   <span className="text-white text-sm">
 //                     {currentIndex + 1} / {images.length}
@@ -142,8 +145,8 @@ const ImageGallery = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState({});
 
-  const openModal = (image, index) => {
-    setSelectedImage(image);
+  const openModal = (index) => {
+    setSelectedImage(images[index].full);
     setCurrentIndex(index);
   };
 
@@ -152,7 +155,7 @@ const ImageGallery = ({ images }) => {
   const navigateImage = (direction) => {
     const newIndex = currentIndex + direction;
     if (newIndex >= 0 && newIndex < images.length) {
-      setSelectedImage(images[newIndex]);
+      setSelectedImage(images[newIndex].full);
       setCurrentIndex(newIndex);
     }
   };
@@ -178,12 +181,13 @@ const ImageGallery = ({ images }) => {
                 </div>
               )}
               <img
-                src={image}
+                src={image.thumbnail}
+                data-full={image.full}
                 alt={`Gallery ${index + 1}`}
                 className={`w-full h-full object-cover cursor-pointer transition-opacity duration-300 ${
                   imageLoaded[index] ? "opacity-100" : "opacity-0"
                 }`}
-                onClick={() => openModal(image, index)}
+                onClick={() => openModal(index)}
                 onLoad={() => handleImageLoad(index)}
                 loading="lazy"
               />
