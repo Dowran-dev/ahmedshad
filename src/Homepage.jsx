@@ -1,25 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Play,
-  Disc3,
-  MapPin,
-  Headphones,
-  Mic,
-  ArrowRight,
-  Speaker,
-  User,
-  Music,
-  Download,
-  Award,
-  FileText,
-  CheckCircle,
-  Star,
-  Target,
-} from "lucide-react";
+import { MapPin, Award, Star } from "lucide-react";
 import ArtistAboutSection from "./ArtistAboutSection";
 import HeroSection from "./HeroSection";
-import logo from "./logo.png";
+// import logo from "./logo.png";
 import Header from "./Header";
 import ImageGallery from "./ImageGallery";
 import YoutubeSection from "./components/YoutubeSection";
@@ -118,7 +102,7 @@ const Homepage = () => {
     {
       city: "Уфа",
       venue: "Тинкофф Холл",
-      date: "10 апреля 2025",
+      date: "11 мая 2025",
       tickets: "Почти распроданы",
       mood: "Сольный концерт",
     },
@@ -145,95 +129,6 @@ const Homepage = () => {
       <ArtistAboutSection artistInfo={artistInfo}></ArtistAboutSection>
       <YoutubeSection id="media_section" />
       <ImageGallery images={images}></ImageGallery>
-
-      {/* Динамическая секция альбомов */}
-      {/* <section className="py-12 sm:py-16 md:py-24 bg-black px-4 sm:px-6 md:px-8">
-        <div className="max-w-6xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            className="text-3xl sm:text-4xl md:text-6xl font-black text-center mb-12 sm:mb-16 md:mb-24"
-          >
-            Мои Альбомы
-          </motion.h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-            <motion.div
-              key={currentAlbum}
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              className={`p-6 sm:p-8 md:p-12 rounded-2xl md:rounded-3xl ${albums[currentAlbum].background}`}
-            >
-              <div className="flex justify-between items-center mb-6 md:mb-8">
-                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-                  {albums[currentAlbum].title}
-                </h3>
-                <Disc3 className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-white/50" />
-              </div>
-
-              <div className="space-y-4 md:space-y-6">
-                {albums[currentAlbum].tracks.map((track, idx) => (
-                  <motion.div
-                    key={idx}
-                    whileHover={{
-                      scale: 1.05,
-                      backgroundColor: "rgba(255,255,255,0.1)",
-                    }}
-                    className="flex justify-between items-center p-3 sm:p-4 rounded-lg md:rounded-xl"
-                  >
-                    <div>
-                      <h4 className="text-base sm:text-lg md:text-xl font-semibold">
-                        {track.name}
-                      </h4>
-                      <p className="text-xs sm:text-sm text-gray-400">
-                        {track.mood}
-                      </p>
-                    </div>
-                    <div className="flex items-center space-x-2 sm:space-x-4">
-                      <span className="text-sm md:text-base text-gray-400">
-                        {track.duration}
-                      </span>
-                      <Headphones className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            <div className="space-y-4 sm:space-y-6 md:space-y-8">
-              {albums.map((album, idx) => (
-                <motion.div
-                  key={idx}
-                  onClick={() => setCurrentAlbum(idx)}
-                  whileHover={{ scale: 1.05 }}
-                  className={`cursor-pointer p-4 sm:p-6 md:p-8 rounded-xl md:rounded-2xl transition-all 
-                    ${
-                      currentAlbum === idx
-                        ? "bg-white/10 border border-white/20"
-                        : "bg-white/5 opacity-60"
-                    }`}
-                >
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <h4 className="text-xl sm:text-2xl md:text-3xl font-bold">
-                        {album.title}
-                      </h4>
-                      <p className="text-sm sm:text-base text-gray-400">
-                        {album.year}
-                      </p>
-                    </div>
-                    <ArrowRight
-                      className={`w-5 h-5 sm:w-6 sm:h-6 transition-transform 
-                        ${currentAlbum === idx ? "rotate-90" : ""}`}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Концерты с интерактивным дизайном */}
       <section className="relative py-12 sm:py-24" id="concerts_section">
