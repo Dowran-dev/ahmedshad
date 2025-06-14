@@ -100,11 +100,20 @@ const Homepage = () => {
 
   const concerts = [
     {
-      city: "Уфа",
-      venue: "Тинкофф Холл",
-      date: "11 мая 2025",
+      city: "Казань",
+      venue: "Ресторан LETO",
+      date: "1 июлья 2025",
+      tickets: "В продаже",
+      mood: "Сольный концерт",
+      url: "https://widget.kassir.ru/?type=A&key=1f48cb97-cd17-86fe-ef47-4b7015829890&domain=kzn.kassir.ru&id=251772",
+    },
+    {
+      city: "Москва",
+      venue: "Ресторан «Огни Баку»",
+      date: "20 июлья 2025",
       tickets: "Почти распроданы",
       mood: "Сольный концерт",
+      url: "https://msk.kassir.ru/koncert/ahmed-shad-2",
     },
   ];
 
@@ -215,30 +224,7 @@ const Homepage = () => {
                       {/* Right Section - New Button Design */}
                       <div className="w-full sm:w-48 md:w-64 p-4 sm:p-6 flex items-center justify-center border-t sm:border-t-0 sm:border-l border-white/10">
                         <a
-                          href="https://widget.kassir.ru/?type=A&key=5c72bfc2-821f-94a8-cfb1-38ba41f21855&domain=ufa.kassir.ru&id=237476"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            try {
-                              if (
-                                window.ksr &&
-                                typeof window.ksr.summon === "function"
-                              ) {
-                                window.ksr.summon({
-                                  width: 1000,
-                                  height: 1000,
-                                });
-                              } else {
-                                window.open(e.currentTarget.href, "_blank");
-                              }
-                            } catch (error) {
-                              console.error(
-                                "Failed to open Kassir widget:",
-                                error
-                              );
-                              window.open(e.currentTarget.href, "_blank");
-                            }
-                            return false;
-                          }}
+                          href={concert.url}
                           className="widget-tr text-sm sm:text-base font-bold text-black"
                           target="_blank"
                           rel="noopener noreferrer"
