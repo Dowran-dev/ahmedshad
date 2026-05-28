@@ -15,6 +15,31 @@ const Homepage = () => {
   const [currentAlbum, setCurrentAlbum] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
 
+  useEffect(() => {
+    // intickets CSS
+    const link1 = document.createElement("link");
+    link1.rel = "stylesheet";
+    link1.href = "//s3.intickets.ru/intickets.min.css";
+    document.head.appendChild(link1);
+
+    const link2 = document.createElement("link");
+    link2.rel = "stylesheet";
+    link2.href = "//s3.intickets.ru/intickets-button-simple.min.css";
+    document.head.appendChild(link2);
+
+    // intickets JS
+    const script = document.createElement("script");
+    script.src = "//s3.intickets.ru/intickets.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.head.removeChild(link1);
+      document.head.removeChild(link2);
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const openModal = (image) => {
     setSelectedImage(image);
   };
@@ -98,22 +123,34 @@ const Homepage = () => {
     },
   ];
 
+  // const concerts = [
+  //   {
+  //     city: "Казань",
+  //     venue: "Ресторан LETO",
+  //     date: "1 июлья 2025",
+  //     tickets: "В продаже",
+  //     mood: "Сольный концерт",
+  //     url: "https://widget.kassir.ru/?type=A&key=1f48cb97-cd17-86fe-ef47-4b7015829890&domain=kzn.kassir.ru&id=251772",
+  //   },
+  //   {
+  //     city: "Москва",
+  //     venue: "Ресторан «Огни Баку»",
+  //     date: "20 июлья 2025",
+  //     tickets: "Почти распроданы",
+  //     mood: "Сольный концерт",
+  //     url: "https://msk.kassir.ru/koncert/ahmed-shad-2",
+  //   },
+  // ];
+
   const concerts = [
     {
-      city: "Казань",
-      venue: "Ресторан LETO",
-      date: "1 июлья 2025",
+      city: "г Октябрьский",
+      venue: "Октябрьский клуб «Фишка»", // ← fill in venue name
+      date: "4 июля 2026", // ← fill in date
       tickets: "В продаже",
       mood: "Сольный концерт",
-      url: "https://widget.kassir.ru/?type=A&key=1f48cb97-cd17-86fe-ef47-4b7015829890&domain=kzn.kassir.ru&id=251772",
-    },
-    {
-      city: "Москва",
-      venue: "Ресторан «Огни Баку»",
-      date: "20 июлья 2025",
-      tickets: "Почти распроданы",
-      mood: "Сольный концерт",
-      url: "https://msk.kassir.ru/koncert/ahmed-shad-2",
+      intickets: false,
+      url: "https://iframeab-pre11173.intickets.ru/event/72579060/",
     },
   ];
 
@@ -126,7 +163,7 @@ const Homepage = () => {
       "Артист с ярким сценическим образом, который привносит в каждое выступление энергию и особую атмосферу",
     contact: {
       representative: "Эльза",
-      phone: "+79603928796",
+      phone: "+79177371791",
       email: "a.elza1@mail.ru",
     },
   };
@@ -154,7 +191,7 @@ const Homepage = () => {
             <h2 className="relative inline-block">
               <span className="absolute -inset-1 blur-xl bg-gradient-to-r from-blue-600 via-red-500 to-purple-600 opacity-30" />
               <span className="relative text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter">
-                TOUR'25
+                TOUR'26
               </span>
             </h2>
           </motion.div>
@@ -222,7 +259,7 @@ const Homepage = () => {
                       </div>
 
                       {/* Right Section - New Button Design */}
-                      <div className="w-full sm:w-48 md:w-64 p-4 sm:p-6 flex items-center justify-center border-t sm:border-t-0 sm:border-l border-white/10">
+                      {/* <div className="w-full sm:w-48 md:w-64 p-4 sm:p-6 flex items-center justify-center border-t sm:border-t-0 sm:border-l border-white/10">
                         <a
                           href={concert.url}
                           className="widget-tr text-sm sm:text-base font-bold text-black"
@@ -240,6 +277,33 @@ const Homepage = () => {
                             </div>
                           </motion.button>
                         </a>
+                      </div> */}
+
+                      <div className="w-full sm:w-48 md:w-64 p-4 sm:p-6 flex items-center justify-center border-t sm:border-t-0 sm:border-l border-white/10">
+                        {concert.intickets ? (
+                          <div
+                            className="intickets-button"
+                            data-intickets={concert.inticketsId}
+                          />
+                        ) : (
+                          <a
+                            href={concert.url}
+                            className="widget-tr text-sm sm:text-base font-bold text-black"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <motion.button
+                              whileHover={{ scale: 1.02 }}
+                              whileTap={{ scale: 0.98 }}
+                              className="w-full relative group/btn"
+                            >
+                              <div className="absolute -inset-[2px] bg-gradient-to-r from-orange-400 to-yellow-400 rounded-lg sm:rounded-xl blur-sm opacity-70 group-hover/btn:opacity-100 transition-opacity" />
+                              <div className="relative flex items-center justify-between bg-gradient-to-r from-orange-400 to-yellow-400 px-4 sm:px-6 py-3 sm:py-4 rounded-lg sm:rounded-xl">
+                                КУПИТЬ БИЛЕТ →
+                              </div>
+                            </motion.button>
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
