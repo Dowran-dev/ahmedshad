@@ -150,8 +150,7 @@ const Homepage = () => {
       tickets: "В продаже",
       mood: "Сольный концерт",
       intickets: false,
-      url: "https://iframeab-pre11173.intickets.ru/seance/73471391?locale=ru_RU
-",
+      url: "https://iframeab-pre11173.intickets.ru/seance/73471391?locale=ru_RU",
     },
   ];
 
