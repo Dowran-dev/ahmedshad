@@ -144,13 +144,14 @@ const Homepage = () => {
 
   const concerts = [
     {
-      city: "г Октябрьский",
-      venue: "Октябрьский клуб «Фишка»", // ← fill in venue name
-      date: "4 июля 2026", // ← fill in date
+      city: "г Набережные Челны",
+      venue: "Ресторан «Turkmen House»", // ← fill in venue name
+      date: "1 августа 2026", // ← fill in date
       tickets: "В продаже",
       mood: "Сольный концерт",
       intickets: false,
-      url: "https://iframeab-pre11173.intickets.ru/event/72579060/",
+      url: "https://iframeab-pre11173.intickets.ru/seance/73471391?locale=ru_RU
+",
     },
   ];
 
