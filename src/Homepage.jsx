@@ -144,13 +144,13 @@ const Homepage = () => {
 
   const concerts = [
     {
-      city: "г Набережные Челны",
-      venue: "Ресторан «Turkmen House»", // ← fill in venue name
-      date: "1 августа 2026", // ← fill in date
+      city: "г Стерлитамак",
+      venue: "Клуб Артель", // ← fill in venue name
+      date: "4 сентября 2026", // ← fill in date
       tickets: "В продаже",
       mood: "Сольный концерт",
       intickets: false,
-      url: "https://iframeab-pre11173.intickets.ru/seance/73471391?locale=ru_RU",
+      url: "https://iframeab-pre11173.intickets.ru/event/74350267/#abiframe",
     },
   ];
 
