@@ -143,16 +143,34 @@ const Homepage = () => {
   // ];
 
   const concerts = [
-    {
-      city: "г Стерлитамак",
-      venue: "Клуб Артель", // ← fill in venue name
-      date: "4 сентября 2026", // ← fill in date
-      tickets: "В продаже",
-      mood: "Сольный концерт",
-      intickets: false,
-      url: "https://iframeab-pre11173.intickets.ru/event/74350267/#abiframe",
-    },
-  ];
+  {
+    city: "г Стерлитамак",
+    venue: "Клуб Артель",
+    date: "4 сентября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/event/74350267/#abiframe",
+  },
+  {
+    city: "г Альметьевск",
+    venue: "",
+    date: "10 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: true,
+    url: "https://iframeab-pre11173.intickets.ru/seance/74675338/#abiframe",
+  },
+  {
+    city: "г Казань",
+    venue: "Клуб Мед",
+    date: "11 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: true,
+    url: "https://iframeab-pre11173.intickets.ru/seance/74724201/#abiframe",
+  },
+];
 
   const artistInfo = {
     name: "Ahmed Shad",
