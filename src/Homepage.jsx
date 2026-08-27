@@ -170,6 +170,15 @@ const Homepage = () => {
     intickets: false,
     url: "https://iframeab-pre11173.intickets.ru/seance/74724201/#abiframe",
   },
+    {
+    city: "г Йошкар-Ола",
+    venue: "Chili-lounge",
+    date: "12 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/74823794/#abiframe",
+  },
 ];
 
   const artistInfo = {
