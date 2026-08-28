@@ -179,6 +179,15 @@ const Homepage = () => {
     intickets: false,
     url: "https://iframeab-pre11173.intickets.ru/seance/74823794/#abiframe",
   },
+    {
+    city: "г Чебоксары",
+    venue: "Ресторан Роланд",
+    date: "14 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/74928130/#abiframe",
+  },
 ];
 
   const artistInfo = {
