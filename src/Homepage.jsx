@@ -144,15 +144,6 @@ const Homepage = () => {
 
   const concerts = [
   {
-    city: "г Стерлитамак",
-    venue: "Клуб Артель",
-    date: "4 сентября 2026",
-    tickets: "В продаже",
-    mood: "Сольный концерт",
-    intickets: false,
-    url: "https://iframeab-pre11173.intickets.ru/event/74350267/#abiframe",
-  },
-  {
     city: "г Альметьевск",
     venue: "Операция Ы",
     date: "10 октября 2026",
@@ -181,12 +172,21 @@ const Homepage = () => {
   },
     {
     city: "г Чебоксары",
-    venue: "Ресторан Роланд",
+    venue: "Чебоксарский камерный театр",
     date: "14 октября 2026",
     tickets: "В продаже",
     mood: "Сольный концерт",
     intickets: false,
-    url: "https://iframeab-pre11173.intickets.ru/seance/74928130/#abiframe",
+    url: "https://iframeab-pre11173.intickets.ru/seance/75318934/?locale=ru_RU#abiframe",
+  },
+    {
+    city: "г Ульяновск",
+    venue: "бар Ржавый ключ",
+    date: "15 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/75323515/#abiframe",
   },
 ];
 
