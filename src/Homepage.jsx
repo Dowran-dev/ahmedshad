@@ -144,15 +144,6 @@ const Homepage = () => {
 
   const concerts = [
   {
-    city: "г Альметьевск",
-    venue: "Операция Ы",
-    date: "10 октября 2026",
-    tickets: "В продаже",
-    mood: "Сольный концерт",
-    intickets: false,
-    url: "https://iframeab-pre11173.intickets.ru/seance/74675338/#abiframe",
-  },
-  {
     city: "г Казань",
     venue: "Клуб Мёд",
     date: "11 октября 2026",
@@ -187,6 +178,15 @@ const Homepage = () => {
     mood: "Сольный концерт",
     intickets: false,
     url: "https://iframeab-pre11173.intickets.ru/seance/75323515/#abiframe",
+  },
+    {
+    city: "г Пенза",
+    venue: "Frau Gross",
+    date: "17 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/75500932/#abiframe",
   },
 ];
 
