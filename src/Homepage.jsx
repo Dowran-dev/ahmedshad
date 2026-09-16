@@ -188,6 +188,15 @@ const Homepage = () => {
     intickets: false,
     url: "https://iframeab-pre11173.intickets.ru/seance/75500932/#abiframe",
   },
+    {
+    city: "г Саранск",
+    venue: "Кафе Соната",
+    date: "18 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/75747569/#abiframe",
+  },
 ];
 
   const artistInfo = {
