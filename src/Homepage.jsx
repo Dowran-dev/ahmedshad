@@ -217,9 +217,9 @@ const Homepage = () => {
     <div className="bg-black text-white min-h-screen font-display overflow-x-hidden select-none">
       <Header />
       <HeroSection />
-      <ArtistAboutSection artistInfo={artistInfo}></ArtistAboutSection>
-      <YoutubeSection id="media_section" />
-      <ImageGallery images={images}></ImageGallery>
+      {/* <ArtistAboutSection artistInfo={artistInfo}></ArtistAboutSection> */}
+      {/* <YoutubeSection id="media_section" /> */}
+      {/* <ImageGallery images={images}></ImageGallery> */}
 
       {/* Концерты с интерактивным дизайном */}
       <section className="relative py-12 sm:py-24" id="concerts_section">
@@ -359,7 +359,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      {/* Enhanced Achievements Section */}
+      {/* Enhanced Achievements Section
       <section
         id="достижения"
         className="py-12 sm:py-24 bg-black relative overflow-hidden"
@@ -419,6 +419,7 @@ const Homepage = () => {
           </motion.div>
         </div>
       </section>
+      */}
 
       <Footer artistInfo={artistInfo} />
     </div>
