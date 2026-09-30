@@ -197,6 +197,24 @@ const Homepage = () => {
     intickets: false,
     url: "https://iframeab-pre11173.intickets.ru/seance/75747569/#abiframe",
   },
+    {
+    city: "г Екатеринбург",
+    venue: "Бар Nebar",
+    date: "2 ноября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/76495216/#abiframe",
+  },
+    {
+    city: "г Пермь",
+    venue: "Руки ВВерх! Бар",
+    date: "3 ноября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/76349783/#abiframe",
+  },
 ];
 
   const artistInfo = {
