@@ -198,6 +198,15 @@ const Homepage = () => {
     url: "https://iframeab-pre11173.intickets.ru/seance/75747569/#abiframe",
   },
     {
+    city: "г Уфа",
+    venue: "Ресторан Магадан",
+    date: "24 октября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/76493906/#abiframe",
+  },
+    {
     city: "г Екатеринбург",
     venue: "Бар Nebar",
     date: "2 ноября 2026",
@@ -214,6 +223,15 @@ const Homepage = () => {
     mood: "Сольный концерт",
     intickets: false,
     url: "https://iframeab-pre11173.intickets.ru/seance/76349783/#abiframe",
+  },
+    {
+    city: "г Ижевск",
+    venue: "Клуб Пепелац",
+    date: "4 ноября 2026",
+    tickets: "В продаже",
+    mood: "Сольный концерт",
+    intickets: false,
+    url: "https://iframeab-pre11173.intickets.ru/seance/76495947/#abiframe",
   },
 ];
 
