@@ -222,7 +222,7 @@ const Homepage = () => {
     tickets: "В продаже",
     mood: "Сольный концерт",
     intickets: false,
-    url: "https://iframeab-pre11173.intickets.ru/seance/76349783/#abiframe",
+    url: "https://iframeab-pre11173.intickets.ru/seance/76696319/#abiframe",
   },
     {
     city: "г Ижевск",
